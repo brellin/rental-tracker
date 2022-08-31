@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default ({ id, name, contacted, scheduled, wanted, link }) => {
+const Row = ({ id, name, contacted, scheduled, wanted, link }) => {
     const [ fields, setFields ] = useState({ name, link, contacted, scheduled, wanted });
 
 
@@ -39,3 +39,5 @@ export default ({ id, name, contacted, scheduled, wanted, link }) => {
         <td><button className="del" onClick={ delRent }>X</button></td>
     </tr>;
 };
+
+export default Row;
