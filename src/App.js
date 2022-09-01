@@ -38,33 +38,35 @@ const App = _ => {
   return <div className="wrApp">
     <h1>Rental Tracker</h1>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Link</th>
-          <th>Contacted</th>
-          <th>Scheduled</th>
-          <th>Wanted</th>
-          <th>Add/Delete</th>
-        </tr>
-      </thead>
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Link</th>
+            <th>Contacted</th>
+            <th>Scheduled</th>
+            <th>Wanted</th>
+            <th>Add/Delete</th>
+          </tr>
+        </thead>
 
-      <tbody>
-        { rentals.map(r => <Row key={ r.id } { ...r } />) }
-      </tbody>
+        <tbody>
+          { rentals.map(r => <Row key={ r.id } { ...r } />) }
+        </tbody>
 
-      <tfoot>
-        <tr>
-          <td> <input type="text" name='name' onInput={ handleChanges } /> </td>
-          <td> <input type="text" name='link' onInput={ handleChanges } /> </td>
-          <td> <input type="checkbox" name="contacted" onInput={ handleChanges } /> </td>
-          <td> <input type="checkbox" name="scheduled" onInput={ handleChanges } /> </td>
-          <td> <input type="checkbox" name="wanted" onInput={ handleChanges } /> </td>
-          <td colSpan={ 5 }><button onClick={ submit }>Submit</button></td>
-        </tr>
-      </tfoot>
-    </table>
+        <tfoot>
+          <tr>
+            <td> <input type="text" name='name' onInput={ handleChanges } /> </td>
+            <td> <input type="text" name='link' onInput={ handleChanges } /> </td>
+            <td> <input type="checkbox" name="contacted" onInput={ handleChanges } /> </td>
+            <td> <input type="checkbox" name="scheduled" onInput={ handleChanges } /> </td>
+            <td> <input type="checkbox" name="wanted" onInput={ handleChanges } /> </td>
+            <td colSpan={ 5 }><button onClick={ submit }>Submit</button></td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
 
   </div>;
 };
