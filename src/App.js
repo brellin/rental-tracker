@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Row from './components/Row';
 import './App.scss';
 
-const serverAddress = window.location.hostname === 'localhost' ? 'http://localhost:5000/rentals' : 'https://pfl-be.herokuapp.com/rentals';
+const serverAddress = window.location.hostname === 'localhost' ? 'http://localhost:5000/rentals' : 'https://server.willumstead.com/rentals';
 
 const App = _ => {
   const [ rentals, setRentals ] = useState([]);
